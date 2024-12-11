@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share and Download Resume Generator</title>
+    <link rel="stylesheet" href="style.css"> <!-- Include the CSS file -->
+</head>
+<body>
+    <h1>Share and Download Resume By Zubia Fatima</h1>
+
+    <form id="resumeForm">
+        <h2>Personal Information</h2>
+        <label for="username">Username:</label>
+        <input id="username" type="text" placeholder="UserName" required />
+        <input id="name" type="text" placeholder="Name" required />
+        <input id="email" type="email" placeholder="Email" required />
+        <input id="phone" type="tel" placeholder="Phone" required />
+
+        <h2>Education</h2>
+        <div id="education-section">
+            <div class="education-group">
+                <input type="text" class="education-input" placeholder="Degree" required />
+                <input type="text" class="education-input" placeholder="School" required />
+                <input type="text" class="education-input" placeholder="Year" required />
+            </div>
+        </div>
+        <button type="button" id="addEducation">Add More Education</button>
+
+        <h2>Work Experience</h2>
+        <div id="work-experience-section">
+            <div class="work-experience-group">
+                <input type="text" class="work-experience-input" placeholder="Company" required />
+                <input type="text" class="work-experience-input" placeholder="Role" required />
+                <input type="text" class="work-experience-input" placeholder="Years" required />
+            </div>
+        </div>
+        <button type="button" id="addWorkExperience">Add More Work Experience</button>
+
+        <h2>Skills</h2>
+        <div id="skills-section">
+            <input type="text" class="skills-input" placeholder="Skill" required />
+        </div>
+        <button type="button" id="addSkill">Add More Skills</button><br>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+
+    <div id="resume-display" contenteditable="true"></div> <!-- This is where the share and download resume will be displayed -->
+
+    <div id="shareable-link-container" style="display: none;">
+        <h2>Shareable Link</h2>
+        <a href="#" id="shareable-link" target="_blank"></a>
+        <br>
+        <button id="download-pdf"><b>Download as PDF</b></button>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to the JS file -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>
